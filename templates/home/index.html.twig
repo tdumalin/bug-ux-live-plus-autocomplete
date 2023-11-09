@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1>Form sample</h1>
+        {{ component('AdForm', {
+            form: form,
+        }) }}
+    </div>
+
+
+{% endblock %}
