@@ -18,8 +18,4 @@ symfony serve -d
 
 Move to [localhost:8000](http://localhost:8000/)
 
-Select Type = "Supply"
-
-Post the form
-
-the dump shows Demand
+Click on set value button and see the autocomplete value is not set.

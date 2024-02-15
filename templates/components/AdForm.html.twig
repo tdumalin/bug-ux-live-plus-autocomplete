@@ -1,6 +1,29 @@
 <div{{ attributes }}>
     {{ form_start(form) }}
-    {{ form_widget(form) }}
+        <div {{ stimulus_controller('set-autocomplete-value') }}>
+            {{ form_row(form.type, {attr: {
+                'data-set-autocomplete-value-target': 'input',
+            }}) }}
+            <div class="btn-group">
+                <button 
+                    class="btn btn-outline-primary"
+                    type="button"
+                    data-action="set-autocomplete-value#setValue"
+                    data-value="demand"    
+                >
+                    Set value: demand
+                </button>
+                <button 
+                    class="btn btn-outline-primary"
+                    type="button"
+                    data-action="set-autocomplete-value#setValue"
+                    data-value="supply"    
+                >
+                    Set value: supply
+                </button>                
+            </div>
+        </div>
+        {{ form_rest(form) }}
         <button class="btn btn-primary mt-5">
             Create
         </button>
